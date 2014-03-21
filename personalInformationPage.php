@@ -1,4 +1,13 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<?php 
+	session_start();
+	echo"Session Started";
+	
+	include("config.php"); //including config.php in our file
+	
+	?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -15,7 +24,7 @@
   
   <div align="center"> Please enter the following information:</div>
   
-	  <form action="personalInfoPost.php" method="post">
+	  <form action="personalInformationWrite.php" method="post">
 		First name: <input type="text" name="firstname">
 		Last name: <input type="text" name="lastname"><br>
 		Social Security Number: <input type="text" name="ssn"><br>

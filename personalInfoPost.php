@@ -1,4 +1,13 @@
-﻿<html>
+﻿<?php 
+	session_start();
+	echo"Session continued";
+	
+	include("config.php"); //including config.php in our file
+	
+	?>
+
+
+<html>
 <body>
 Results from Form<br><br>
 
