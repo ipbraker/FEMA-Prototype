@@ -3,6 +3,8 @@
 <?php 
 	session_start();
 	echo"Session Started";
+	session_register("cid");
+	$cid = rand(0,500);
 	
 	include("config.php"); //including config.php in our file
 	
@@ -31,6 +33,7 @@
 		Date of Birth: <input type="text" name="dob"><br>
 		Primary Language: <input type="text" name="lang"><br>
 		Phone Number: <input type="text" name="phone"><br>
+		Email: <input type="text" name="email"><br>
 		<input type="submit" value="Continue Application">
 	</form>
   

@@ -2,6 +2,7 @@
 <?php 
 	session_start();
 
+
 	include("config.php"); //including config.php in our file
 ?>
 	
@@ -17,13 +18,14 @@ BEGINNING PHP....With the variables<br />
 <br>
 
 <?php
-	//$table = "personal_info";
-
-	//create the CID to equal the Session number
-	//int rand(0,500)
-	//$_SESSION['cid'] = rand;
-	//$cid = $_SESSION['cid'];
+	$cid = $_SESSION['cid'];
+	//echo $cid;
+	?>
 	
+	CID HAS BEEN SET<br />
+<br>
+	
+<?php	
 	//pull the inputs from form into variables
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
@@ -31,12 +33,18 @@ BEGINNING PHP....With the variables<br />
 	$dob = $_POST['dob'];
 	$lang = $_POST['lang'];
 	$phone = $_POST['phone'];
+	$email = $_POST['email'];
 		
+	if($firstname==''||$lastname==''||$ssn==''||$dob==''||$lang==''||$phone==''||$email==''){
+        header("Location: ERROR.php");
+    }
+    else{      
 	//write to the SQL database
-	mysql_query("INSERT INTO personal_info (firstname, lastname, ssn, dob, lang, phone) VALUES ('$firstname','$lastname','$ssn','$dob','$lang','$phone')"); 	
+	mysql_query("INSERT INTO personal_info (cid, firstname, lastname, ssn, dob, lang, phone, email) VALUES ('$cid','$firstname','$lastname','$ssn','$dob','$lang','$phone','$email')"); 	
 	
-	//header("Location: writeCorrectlyTest.php"); /* Redirect browser */
 	//echo redirecting...
+	header("Location: disasterVerificationPage.php"); /* Redirect browser */
+	}
 
 ?>
 
