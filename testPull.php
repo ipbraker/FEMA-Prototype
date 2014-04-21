@@ -3,23 +3,22 @@
 	session_start();
 	include("config.php"); //including config.php in our file
 	$cid = $_SESSION['cid'];
+	
+	$result = mysql_query("SELECT * FROM personal_info WHERE cid = '$cid'");
+	$applicantName = mysql_query("SELECT firstname, lastname FROM personal_info WHERE cid='$cid'");
+    $fname = mysql_result($applicantName, 0, firstname);
+    $lname = mysql_result($applicantName, 0, lastname);
 ?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Additional Comments Write</title>
+<title>Untitled 1</title>
 </head>
 
 <body>
-<?php
-
-	$addComm = $_POST['addCom'];
-	
-	mysql_query("UPDATE personal_info SET addCom = '$addComm' WHERE cid = '$cid'");
-	
-	header("Location: summaryWait.php");
-?>
+	You are now viewing <?php echo"{$fname} {$lname}"?>'s transcript. <br>
 </body>
 
 </html>

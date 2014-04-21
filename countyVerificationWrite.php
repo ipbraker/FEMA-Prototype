@@ -41,7 +41,7 @@ WORKING SO FAR!!! HOPE IT DOES IT ALL CORRECTLY
 			header("Location: fireInformationPage.php");
 		} else {
 			if ($countyPost == 'Cleveland') {
-				header("Location: tornado.php");
+				header("Location: tornadoInformationPage.php");
 			} else {
 			}
 		}

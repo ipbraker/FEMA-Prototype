@@ -2,7 +2,6 @@
 
 <?php 
 	session_start();
-	echo"Session Started";
 	session_register("cid");
 	$cid = rand(0,500);
 	
@@ -25,7 +24,7 @@
   <div id="header"><h2 class="sansserif">FEMA Disaster Relief Application</h2></div>
   
   <div align="center"> Please enter the following information:</div>
-  
+  <?php  	echo "Application number = $cid" ;  ?>
 	  <form action="personalInformationWrite.php" method="post">
 		First name: <input type="text" name="firstname">
 		Last name: <input type="text" name="lastname"><br>

@@ -40,7 +40,7 @@
 	} else {
 		if ($funcDam == 'true') {
 			header("Location: functionalNeedsPage.php");
-		} else {
+		} else {header("Location: additionalCommentsPage.php");
 		}
 	}	
 	

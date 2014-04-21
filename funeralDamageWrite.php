@@ -30,7 +30,8 @@
 		// Determines whether or not the other personal damage checks have been selected
 	if ($funcDam == 'true') {
 		header("Location: functionalNeedsPage.php");
-	} else {}
+	} else {header("Location: additionalCommentsPage.php");
+	}
 
 ?>
 

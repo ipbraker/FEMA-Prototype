@@ -78,7 +78,7 @@
 						} else {
 							if ($_SESSION['funcDam'] == 'true') {
 								header("Location: functionalNeedsPage.php");
-							} else {
+							} else { header("Location: additionalCommentsPage.php");
 							}
 						}
 					}

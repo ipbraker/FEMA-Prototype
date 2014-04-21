@@ -17,7 +17,7 @@
 <! Standard first header on all pages>
 <div id="header"><h2 class="sansserif">FEMA Disaster Relief Application</h2></div>
 
-<div align="center"> Please enter the following information concerning your situation</div>
+<div align="center"> Please enter the following information about the damage related to the hurricane:</div>
 
 	<form action="hurricaneInfoWrite.php" method="post">
 	Has the hurricane stopped completely? <input type="checkbox" name="stopYes" value="yes">Yes <input type="checkbox" name="stopNo" value="no">No<br>

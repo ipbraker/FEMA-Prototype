@@ -16,7 +16,7 @@
 <! Standard first header on all pages>
 <div id="header"><h2 class="sansserif">FEMA Disaster Relief Application</h2></div>
 
-<div align="center"> Please enter the following information:</div>
+<div align="center"> Please enter the following information about the damage related to the fire:</div>
 
 	<form action="fireInformationWrite.php" method="post">
 	Describe any fire damage: <input type="text" name="fireDam"><br>
